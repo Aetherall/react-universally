@@ -7,11 +7,11 @@
 // is supported for each context.
 {
   "presets": [
-    ["env", { "targets": { "node": true } }],
-    "stage-3",
-    "react"
+    ["@babel/preset-env", { "targets": { "node": true } }],
+    "@babel/preset-stage-3",
+    "@babel/preset-react"
   ],
   "plugins": [
-    "syntax-dynamic-import"
+    "@babel/syntax-dynamic-import"
   ]
 }
