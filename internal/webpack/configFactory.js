@@ -412,15 +412,15 @@ export default function webpackConfigFactory(buildOptions) {
                   // more optimized for production.
                   // NOTE: Symbol needs to be polyfilled. Ensure this feature
                   // is enabled in the polyfill.io configuration.
-                  ifProd('@babel/transform-react-inline-elements'),
+                  ifProd('@babel/plugin-transform-react-inline-elements'),
                   // Hoists element creation to the top level for subtrees that
                   // are fully static, which reduces call to React.createElement
                   // and the resulting allocations. More importantly, it tells
                   // React that the subtree hasn’t changed so React can completely
                   // skip it when reconciling.
-                  ifProd('@babel/transform-react-constant-elements'),
+                  ifProd('@babel/plugin-transform-react-constant-elements'),
                   // Add syntax dynamic import for direct webpack `import()` support
-                  '@babel/syntax-dynamic-import',
+                  '@babel/plugin-syntax-dynamic-import',
                 ].filter(x => x != null),
               },
               buildOptions,
